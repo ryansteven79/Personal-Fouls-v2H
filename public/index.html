@@ -280,7 +280,7 @@
       $("#career-card").show();
       $("#crime-card").show();
       $.ajax({
-          url: `https://api.sportradar.us/nfl-ot1/seasontd/${arrestYear}/REG/teams/${teamID}/statistics.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
+          url: `https://personal-fouls-v2h.herokuapp.com/https://api.sportradar.us/nfl-ot1/seasontd/${arrestYear}/REG/teams/${teamID}/statistics.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
           method: "GET",
 
         })
@@ -305,7 +305,7 @@
                 " yards</li>")
 
               $.ajax({
-                  url: `https://api.sportradar.us/nfl-ot1/players/${playerID}/profile.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
+                  url: `https://personal-fouls-v2h.herokuapp.com/https://api.sportradar.us/nfl-ot1/players/${playerID}/profile.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
                   method: "GET"
                 })
                 .then(function (player) {
