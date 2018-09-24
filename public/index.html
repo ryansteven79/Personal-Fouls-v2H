@@ -233,7 +233,7 @@
       // $("#back-to-teams").show();
       // $("#player-card").toggle();
       $.ajax({
-          url: "/api/http://nflarrest.com/api/v1/team/arrests/" + teamAbv,
+          url: "http://nflarrest.com/api/v1/team/arrests/" + teamAbv,
           method: "GET"
         })
         .then(function (response) {
@@ -280,7 +280,7 @@
       $("#career-card").show();
       $("#crime-card").show();
       $.ajax({
-          url: `/api/http://api.sportradar.us/nfl-ot1/seasontd/${arrestYear}/REG/teams/${teamID}/statistics.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
+          url: `http://api.sportradar.us/nfl-ot1/seasontd/${arrestYear}/REG/teams/${teamID}/statistics.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
           method: "GET",
 
         })
@@ -305,7 +305,7 @@
                 " yards</li>")
 
               $.ajax({
-                  url: `/api/http://api.sportradar.us/nfl-ot1/players/${playerID}/profile.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
+                  url: `http://api.sportradar.us/nfl-ot1/players/${playerID}/profile.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
                   method: "GET"
                 })
                 .then(function (player) {
@@ -334,7 +334,7 @@
       var arrestedPlayer = $(this).text();
       // console.log(arrestYear, teamID);
       $.ajax({
-          url: `/api/http://nflarrest.com/api/v1/player/arrests/${arrestedPlayer}`,
+          url: `http://nflarrest.com/api/v1/player/arrests/${arrestedPlayer}`,
           method: "GET",
         })
         .then(function (response) {
@@ -359,7 +359,7 @@
         var NFLPlayer = "NFL "
         var arrested = " arrested";
         $.ajax({
-          url: `/api/https://www.googleapis.com/youtube/v3/search?part=snippet&q=${NFLPlayer}${arrestedPlayer}${arrested}&key=AIzaSyCwz5pE_BrAO1UtYIEAZpPs0bqHxkhIgIA`,
+          url: `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${NFLPlayer}${arrestedPlayer}${arrested}&key=AIzaSyCwz5pE_BrAO1UtYIEAZpPs0bqHxkhIgIA`,
           method: "GET"
         }).then(function (response) {
           var vidID = response.items[0].id.videoId;
@@ -374,7 +374,7 @@
         var NFLPlayer = "NFL "
         var highlights = " highlights";
         $.ajax({
-          url: `/api/https://www.googleapis.com/youtube/v3/search?part=snippet&q=${NFLPlayer}${arrestedPlayer}&key=AIzaSyCwz5pE_BrAO1UtYIEAZpPs0bqHxkhIgIA`,
+          url: `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${NFLPlayer}${arrestedPlayer}&key=AIzaSyCwz5pE_BrAO1UtYIEAZpPs0bqHxkhIgIA`,
           method: "GET"
         }).then(function (response) {
           var vidID = response.items[0].id.videoId;
