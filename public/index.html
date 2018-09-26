@@ -233,7 +233,7 @@
       // $("#back-to-teams").show();
       // $("#player-card").toggle();
       $.ajax({
-          url: "http://nflarrest.com/api/v1/team/arrests/" + teamAbv,
+          url: "https://nflarrest.com/api/v1/team/arrests/" + teamAbv,
           method: "GET"
         })
         .then(function (response) {
@@ -280,7 +280,7 @@
       $("#career-card").show();
       $("#crime-card").show();
       $.ajax({
-          url: `http://api.sportradar.us/nfl-ot1/seasontd/${arrestYear}/REG/teams/${teamID}/statistics.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
+          url: `https://api.sportradar.us/nfl-ot1/seasontd/${arrestYear}/REG/teams/${teamID}/statistics.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
           method: "GET",
 
         })
@@ -305,7 +305,7 @@
                 " yards</li>")
 
               $.ajax({
-                  url: `http://api.sportradar.us/nfl-ot1/players/${playerID}/profile.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
+                  url: `https://api.sportradar.us/nfl-ot1/players/${playerID}/profile.json?api_key=vtrnaew9y79qepp9z26y8tmf`,
                   method: "GET"
                 })
                 .then(function (player) {
@@ -334,7 +334,7 @@
       var arrestedPlayer = $(this).text();
       // console.log(arrestYear, teamID);
       $.ajax({
-          url: `http://nflarrest.com/api/v1/player/arrests/${arrestedPlayer}`,
+          url: `https://nflarrest.com/api/v1/player/arrests/${arrestedPlayer}`,
           method: "GET",
         })
         .then(function (response) {
